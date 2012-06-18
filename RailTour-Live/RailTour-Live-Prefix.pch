@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RailTour-Live' target in the 'RailTour-Live' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
