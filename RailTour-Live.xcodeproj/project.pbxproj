@@ -37,6 +37,7 @@
 		A6363350158F5B4D004C2B30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A636334F158F5B4D004C2B30 /* AppDelegate.m */; };
 		A6363353158F5B4D004C2B30 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6363352158F5B4D004C2B30 /* MainViewController.m */; };
 		A6363355158F5B4D004C2B30 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6363354158F5B4D004C2B30 /* MainViewController.xib */; };
+		A636335F158F5B95004C2B30 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A636335E158F5B95004C2B30 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +55,10 @@
 		A636331B158F5B4C004C2B30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A636331D158F5B4C004C2B30 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A636331F158F5B4C004C2B30 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		A6363323158F5B4C004C2B30 /* RailTour-Live-Info.plist */ = {isa = PBXFileReference; path = "RailTour-Live-Info.plist"; sourceTree = "<group>"; };
+		A6363323158F5B4C004C2B30 /* RailTour-Live-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RailTour-Live-Info.plist"; sourceTree = "<group>"; };
 		A6363325158F5B4C004C2B30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6363327158F5B4C004C2B30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6363329158F5B4C004C2B30 /* RailTour-Live-Prefix.pch */ = {isa = PBXFileReference; path = "RailTour-Live-Prefix.pch"; sourceTree = "<group>"; };
+		A6363329158F5B4C004C2B30 /* RailTour-Live-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RailTour-Live-Prefix.pch"; sourceTree = "<group>"; };
 		A636332A158F5B4C004C2B30 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
 		A636332F158F5B4C004C2B30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6363333158F5B4C004C2B30 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -70,13 +71,14 @@
 		A6363347158F5B4C004C2B30 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Resources/splash/Default@2x~iphone.png"; sourceTree = "<group>"; };
 		A6363349158F5B4D004C2B30 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		A636334B158F5B4D004C2B30 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
-		A636334E158F5B4D004C2B30 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		A636334E158F5B4D004C2B30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		A636334F158F5B4D004C2B30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		A6363351158F5B4D004C2B30 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		A6363351158F5B4D004C2B30 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		A6363352158F5B4D004C2B30 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		A6363354158F5B4D004C2B30 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		A6363357158F5B4D004C2B30 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
-		A6363358158F5B4D004C2B30 /* verify.sh */ = {isa = PBXFileReference; path = verify.sh; sourceTree = "<group>"; };
+		A6363357158F5B4D004C2B30 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		A6363358158F5B4D004C2B30 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		A636335E158F5B95004C2B30 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		A63632F5158F5B4C004C2B30 = {
 			isa = PBXGroup;
 			children = (
+				A636335E158F5B95004C2B30 /* www */,
 				A6363321158F5B4C004C2B30 /* RailTour-Live */,
 				A6363306158F5B4C004C2B30 /* Frameworks */,
 				A6363304158F5B4C004C2B30 /* Products */,
@@ -327,6 +330,7 @@
 				A636334A158F5B4D004C2B30 /* Capture.bundle in Resources */,
 				A636334C158F5B4D004C2B30 /* Cordova.plist in Resources */,
 				A6363355158F5B4D004C2B30 /* MainViewController.xib in Resources */,
+				A636335F158F5B95004C2B30 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
