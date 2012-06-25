@@ -13,7 +13,7 @@ state.code = '';
 state.registered = '';
 state.tours = '';
 state.promook = '';
-
+state.badge = '';
 
 function resetvars() {
     state.name = '';
@@ -30,6 +30,7 @@ function resetvars() {
     state.registered = '';
     state.tours = '';
     state.promook = '';
+    state.badge = '';
 }
 
 //var activeSection = 'HOME';
@@ -65,7 +66,7 @@ function preventBehavior(e)
 
 
 
-document.addEventListener("touchmove", preventBehavior, false);
+//document.addEventListener("touchmove", preventBehavior, false);
 
 $("#pageHome").live('pagehide', forcerefresh);
 $("#pageLogin").live('pagehide', forcerefresh);
@@ -121,6 +122,20 @@ showspinner('Getting Latest Tour Listings...');
                 });
 }
 
+function getupdates() {
+    showspinner('Getting Latest Tour Updates...');
+    jQuery.post(GLOBAL_SERVER,({phone : state.phone , action: 'RECIEVEDUPDATES'}),
+                function( data ) {
+                if(data != "") {
+                $('#TourUpdates').html(data).listview('refresh');
+                hidespinner();
+                } else {
+                navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                hidespinner();
+                }        
+                }); 
+}
+
 function getheader() {
 	
 	var header = '';
@@ -136,22 +151,32 @@ function getheader() {
 	return (header);
 }
 
+function getupdatecount() {
+    jQuery.post(GLOBAL_SERVER,({phone : state.phone , action: 'UPDATECOUNT'}),
+                function( data ) {
+                if(data != "") {
+                state.badge = data;
+                } else {
+                state.badge = '0';
+                }        
+                }); 
+}
+
 function getfooter() {
-    
     var actHome='';
     var actTours='';
     var actProfile='';
     var actSettings='';
     var actUpdates='';
-    var badge='';
-    var promo='';
+
+    getupdatecount();
+    
     if (activeSection=='HOME') actHome='class="ui-btn-active"';
     if (activeSection=='TOURS') actTours='class="ui-btn-active"';
     if (activeSection=='PROFILE') actProfile='class="ui-btn-active"';
     if (activeSection=='SETTINGS') actSettings='class="ui-btn-active"';
     if (activeSection=='UPDATES') actUpdates='class="ui-btn-active"';
-    badge = '0';
-	promo = '0';
+
     var foot = '<div data-role="navbar" class="nav-glyphish-example" data-grid="d">\
     <ul class="ui-grid-b">\
     <li class="ui-block-a"><a href="#" onClick="goHome();" data-theme="b" '+actHome+' data-role="button" id="Bhome" data-icon="custom">Home</a></li>\
@@ -159,7 +184,7 @@ function getfooter() {
     <li class="ui-block-c"><a href="#" onClick="goProfile();" data-theme="b" '+actProfile+' data-role="button" id="Bprofile" data-icon="custom">Profile</a></li>\
     <li class="ui-block-d"><a href="#" onClick="goSettings();" data-theme="b" '+actSettings+' data-role="button" id="Bsettings" data-icon="custom">Settings</a></li>\
     <li class="ui-block-e"><a href="#" onClick="goUpdates();" data-theme="b" '+actUpdates+' data-role="button" id="Bupdate" data-icon="custom">\
-    <div class="badger-outter" id="Badger"><div class="badger-inner"><p class="badger-badge" id="Badge">'+badge+'</p></div></div>Updates</a></li>\
+    <div class="badger-outter" id="Badger"><div class="badger-inner"><p class="badger-badge" id="Badge">'+state.badge+'</p></div></div>Updates</a></li>\
     </ul>\
     </div>';
 
@@ -281,6 +306,15 @@ function goProfile() {
 		return true;
 	} else {
 		$.mobile.changePage('profile.html');
+	}	
+}
+
+function goUpdates() {
+	if (state.name == "") {
+		$.mobile.changePage('login.html');
+		return true;
+	} else {
+		$.mobile.changePage('updates.html');
 	}	
 }
 
