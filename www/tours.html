@@ -13,8 +13,7 @@
       <div data-role="page" id="pageTours">
           <div data-role="header" id="mainheader"></div>
           <div data-role="content" id="contentTours">
-              <ul data-role="listview" data-filter="true">
-              <div id="TourListings">&nbsp;</div></ul>
+              <ul data-role="listview" data-filter="true" id="TourListings"></ul>
         <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
               <script type="text/javascript">
                   activeSection="TOURS";
@@ -25,7 +24,7 @@
                   jQuery.post(url,({action: 'TOURS'}),
                               function( data ) {
                               if(data != "") {
-                              $('#TourListings').html(data);
+                              $('#TourListings').html(data).listview('refresh');
                               } else {
                               navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
                               hidespinner();
