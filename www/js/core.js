@@ -93,6 +93,26 @@ function onDeviceReady() {
     
 }
 
+function getbalance(){
+    jQuery.post(url,({phone: state.phone, action: 'BALANCE'}),
+                function( data ) { 
+                if(data != "") {
+                state.credits = data;
+                }        
+                });
+}
+
+function gettours() {
+    jQuery.post(url,({action: 'TOURS'}),
+                function( data ) {
+                if(data != "") {
+                $('#TourListings').html(data).listview('refresh');
+                } else {
+                navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                hidespinner();
+                }        
+                });
+}
 
 function getheader() {
 	
@@ -158,7 +178,7 @@ function addmarkup(event, data) {
 	appBusy = false;
 	
 	var page = $(event.handleObj.selector);
-	var header = page.find("#mainheader").first();
+	var header = page.find("#mainheader").first();;
 	header.html(getheader);
     
 	var footer = page.find("#mainfooter").first();
@@ -242,9 +262,12 @@ function serializeSession($form, $action) {
 function goHome() {
 	if (!IsLoggedIn()) {
 		$.mobile.changePage('login.html');
-	} else 	$.mobile.changePage('home.html');
-}
+	} else {
+        $.mobile.changePage('home.html');
 
+    }
+}
+    
 function goProfile() {
 	if (state.name == "") {
 		$.mobile.changePage('login.html');
@@ -264,12 +287,12 @@ function goSettings() {
 }
 
 function goTours() {
-//	if (state.name == "") {
-//		$.mobile.changePage('login.html');
-//		return true;
-//	} else {
+	if (state.name == "") {
+		$.mobile.changePage('login.html');
+		return true;
+	} else {
 		$.mobile.changePage('tours.html');
-//	}	
+	}	
 }
 
 function getStoredUser() {

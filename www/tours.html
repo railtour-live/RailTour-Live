@@ -6,7 +6,6 @@
 	<meta charset="utf-8">
         <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
         <script type="text/javascript">writeheader(false);</script>
-
   </head>
   <body>
 
@@ -20,16 +19,8 @@
               </script>
               <script>
                   showspinner('Getting Latest Tour Listings...');
-                  var url = GLOBAL_SERVER;
-                  jQuery.post(url,({action: 'TOURS'}),
-                              function( data ) {
-                              if(data != "") {
-                              $('#TourListings').html(data).listview('refresh');
-                              } else {
-                              navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
-                              hidespinner();
-                              }        
-                              });
+                  getbalance();
+                  gettours();
                   </script>
           
       </div></body>
