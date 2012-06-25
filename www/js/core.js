@@ -39,7 +39,7 @@ var appBusy = false;
 function preventBehavior(e) 
 { 
     e.preventDefault(); 
-};
+}
 
 //window.plugins.inAppPurchaseManager.onPurchased = function(transactionIdentifier, productId, transactionReceipt) {
 //    console.log('purchased: ' + productId);
@@ -93,23 +93,30 @@ function onDeviceReady() {
     
 }
 
-function getbalance(){
-    jQuery.post(url,({phone: state.phone, action: 'BALANCE'}),
-                function( data ) { 
+function getbalance() {
+    showspinner('Checking Balance...');
+    jQuery.post(GLOBAL_SERVER,({phone : state.phone , action: 'BALANCE'}),
+                function( data ) {
                 if(data != "") {
                 state.credits = data;
+                hidespinner();
+                } else {
+                navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                hidespinner();
                 }        
                 });
 }
 
 function gettours() {
-    jQuery.post(url,({action: 'TOURS'}),
+showspinner('Getting Latest Tour Listings...');
+    jQuery.post(GLOBAL_SERVER,({action: 'TOURS'}),
                 function( data ) {
                 if(data != "") {
-                $('#TourListings').html(data).listview('refresh');
+                    $('#TourListings').html(data).listview('refresh');
+                    hidespinner();
                 } else {
-                navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
-                hidespinner();
+                    navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                    hidespinner();
                 }        
                 });
 }
@@ -119,7 +126,7 @@ function getheader() {
 	var header = '';
     
 	if (IsLoggedIn() == false) {
-		header = header + '<a href="info.html" data-iconpos="notext" id="help" data-icon="info" data-theme="b"></a><H1>Login</H1>'
+		header = header + '<a href="info.html" data-iconpos="notext" id="help" data-icon="info" data-theme="b"></a><H1>Login</H1>';
 	} else {
 		header = header
         + '<a href="info.html" data-iconpos="notext" id="help" data-icon="info" data-theme="b"></a><H2>Credit &pound;'
