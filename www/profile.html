@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+	<meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
+        <script type="text/javascript">writeheader(false);</script>
+  </head>
+  <body>
+
+      <div data-role="page" id="pageProfile">
+          <div data-role="header" id="mainheader"></div>
+          <div data-role="content" id="contentProfile">
+              <H3>Profile</H3>
+              <div id='UserName'></div>
+              <div id='UserPhone'></div>
+              <div id='UserEmail'></div>
+              <div id='UserTour'></div>
+          </div>
+        <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
+          <script type="text/javascript">
+              activeSection="PROFILE";
+              $('#UserName').html('Name :: '+state.name+'.');
+              $('#UserPhone').html('Mobile Number :: '+state.phone+'.');
+              $('#UserEmail').html('Email :: '+state.email+'.');
+              $('#UserTour').html('Current Tour :: '+state.tours+'.');
+              
+              </script> 
+          
+      </div></body>
+</html>

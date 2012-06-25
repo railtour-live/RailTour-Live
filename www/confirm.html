@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+	<meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
+        <script type="text/javascript">writeheader(false);</script>
+  </head>
+  <body>
+
+      <div data-role="page" id="pageConfirm">
+          <div data-role="header" id="mainheader"></div>
+          <div data-role="content" id="contentConfirm">
+              <H2><p></p>Your account is currently inactive, you must enter a 4 digit code we have sent to your mobile phone.</H2>
+              <p></p>
+              <p><div data-role="fieldcontain">
+                  
+                      <H2>Confirmation Code:</H2>
+                      <form method="post" id="formConfirm" autocomplete="off">
+                      <div id="contentConfirmInfo">&nbsp;</div>
+                          <input type="tel" name="code" id="code" value=""/>
+                          <button type="submit" data-theme="b" data-icon="check" data-iconpos="left">Activate</button>
+                      </form>
+                      <form method="post" id="formResend" autocomplete="off">
+                          <button type="submit" data-theme="b" data-icon="grid" data-mini="true" data-iconpos="left">Resend Code</button>
+                      </form>
+              </div></p>
+          </div>
+        <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
+          <script type="text/javascript">
+              activeSection="CONFIRM";
+              
+              
+              
+              $('#formConfirm').submit(function(event) {
+                                      $('#contentConfirmInfo').html('<div class="info">Verifying confirmation code...</div>');
+                                      $('#contentConfirmInfo').html('&nbsp;');
+                                      event.preventDefault(); 
+                                      showspinner('Verifying Code...');
+                                      setupAjaxErrorHandler('#contentConfirmInfo'); 
+                                      var url = GLOBAL_SERVER;
+                                      $('#contentConfirmInfo').html('<div class="info">Please Wait...</div>');	
+                                      state.code=$('[name=code]').val();
+                                       jQuery.post(url,({phone: state.phone, code: state.code, action: 'CONFIRM'}),
+                                                  function( data ) { 
+                                                  if(data != "") {
+                                                  var resp = data.split("\n", 1);
+                                                  if (resp[0]=='OK') {
+                                                  $('#contentConfirmInfo').html('<div class="info">Your account has been activated.</div>');
+                                                  IsLoggedIn();
+                                                  $.mobile.changePage('home.html');
+                                                  
+                                                  };
+                                                   if (resp[0]=='BAD CODE') {
+                                                   navigator.notification.alert("The code you entered was not correct, please try again.", null,"Verification Failed","Retry");
+                                                   hidespinner();
+                                                   }
+                                                  } else {
+                                                  navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                                                  hidespinner();
+                                                  }        
+                                                  });
+                                      return false;
+                                      });
+              $('#formResend').submit(function(event) {
+                                     $('#contentConfirmInfo').html('<div class="info">Sending confirmation code...</div>');
+                                     $('#contentConfirmInfo').html('&nbsp;');
+                                     event.preventDefault(); 
+                                     showspinner('Sending Code...');
+                                     setupAjaxErrorHandler('#contentConfirmInfo'); 
+                                     var url = GLOBAL_SERVER;
+                                     $('#contentConfirmInfo').html('<div class="info">Sending Code. Please Wait...</div>');	
+                                     state.user=$('[name=username]').val();
+                                     jQuery.post(url,({phone: state.phone, action: 'RESEND'}),
+                                                 function( data ) { 
+                                                 if(data != "") {
+                                                 var resp = data.split("\n", 2);
+                                                 
+                                                 if (resp[0]=='OK') {
+                                                    state.sms=resp[1];
+                                                    $('#contentConfirmInfo').html('<div class="info">Code has been sent.</div>');
+                                                    hidespinner();
+                                                 };
+                                        } else {
+                                                 navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");	
+                                                 hidespinner();
+                                                 }        
+                                                 });
+                                     return false;
+                                     });
+              </script> 
+
+</html>

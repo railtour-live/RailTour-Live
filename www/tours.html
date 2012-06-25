@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+	<meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
+        <script type="text/javascript">writeheader(false);</script>
+
+  </head>
+  <body>
+
+      <div data-role="page" id="pageTours">
+          <div data-role="header" id="mainheader"></div>
+          <div data-role="content" id="contentTours">
+              <ul data-role="listview" data-filter="true">
+              <div id="TourListings">&nbsp;</div></ul>
+        <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
+              <script type="text/javascript">
+                  activeSection="TOURS";
+              </script>
+              <script>
+                  showspinner('Getting Latest Tour Listings...');
+                  var url = GLOBAL_SERVER;
+                  jQuery.post(url,({action: 'TOURS'}),
+                              function( data ) {
+                              if(data != "") {
+                              $('#TourListings').html(data);
+                              } else {
+                              navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                              hidespinner();
+                              }        
+                              });
+                  </script>
+          
+      </div></body>
+</html>

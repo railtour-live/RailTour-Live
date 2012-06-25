@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+	<meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
+        <script type="text/javascript">writeheader(false);</script>
+  </head>
+  <body>
+
+      <div data-role="page" id="pageHome">
+          <div data-role="header" id="mainheader"></div>
+          <div data-role="content" id="content">
+              <H4><div id="contentWelcomeText"></div></H4>
+              <H5><div id="contentWelcomeLast"></div></H5>
+              <p>From this app, you can do the following,<br>
+                  &bull;Send and receive updates<br>
+                  &bull;Check your balance<br>
+                  &bull;Subscribe to tours<br>
+                  &bull;Add funds to your account<br>
+                  &bull;Change your account settings<br><hr>
+              <p>Your current balance is listed at the top of the page, if you need any help on any of the pages, please click the button at the top left of the page,.<br>
+              </p>
+                  
+              </H2>
+              </div>
+        <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
+          <!-- /content -->
+        
+          
+          <!-- /page --> 
+  
+          <script type="text/javascript">
+              activeSection="HOME";
+              $('#contentWelcomeText').html('Login Succesful.<br>Welcome '+state.name+'.');
+              $('#contentWelcomeLast').html('Last Logged On :: '+state.last+'.');
+              </script> 
+          
+      </div></body>
+</html>

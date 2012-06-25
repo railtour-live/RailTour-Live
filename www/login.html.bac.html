@@ -1,0 +1,111 @@
+<html>
+<head>
+	<script type="text/javascript" charset="utf-8" src="header.js"></script>
+ 	<script type="text/javascript">writeheader(false);</script>
+</head>
+<body>
+	<div data-role="page" id="pageLogin">
+		<div data-role="header" data-position="fixed" id="mainheader"></div><div id="fixheaderspacing"></div>
+		<div data-role="content" id="contentLogin">
+			<a href="../map/map.html" rel="external" data-role="button" data-theme="b"  data-icon="grid" data-iconpos="left" onClick="">Show local map with our partners.</a>
+		<hr/>
+		<h2>Login</h2>
+			<form method="post" id="formLogin" autocomplete="off">
+				<div id="contentLoginInfo">&nbsp;</div>
+				<div data-role="fieldcontain">
+					<label for="username">E-mail:</label> <input type="email" name="username" id="username" value="" />
+				</div>
+	
+				<div data-role="fieldcontain">
+					<label for="password">Password:</label> <input type="password" name="password" id="password" value="" />
+				</div>
+				
+				<button type="submit" data-icon="check" data-iconpos="left">Login</button>
+				<div id="androidexitbut"></div>
+				</form>
+		</div>
+		<div id="fixfooterspacing"></div>
+		<div data-role="footer" data-position="fixed" id="mainfooter"></div>
+<script type="text/javascript">
+$('#username').val(getStoredUser());
+
+activeSection="HOME";
+if (navigator.splashscreen!=undefined) {
+	navigator.splashscreen.hide();
+}
+
+$('#contentLoginInfo').html('<div class="info">Getting Insurers List...</div>');
+  $('#contentLoginInfo').html('&nbsp;');
+  $('#formLogin').submit(function(event) {
+	  	event.preventDefault(); 
+	  	showspinner('Logging in...');
+		setupAjaxErrorHandler('#contentLoginInfo'); 
+	    var url = GLOBAL_SERVER;
+		$('#contentLoginInfo').html('<div class="info">Logging in. Please Wait...</div>');	
+		state.user=$('[name=username]').val();
+		state.password=$('[name=password]').val();
+		
+		jQuery.post(url,({username: state.user, password : state.password, action: 'LOGIN'}),
+	    		
+	    function( data ) { 
+	        if(data != "") {
+				var resp = data.split("\n", 4);
+        					
+				if (resp[0]=='OK') {
+					state.email=resp[1];
+					state.phone=resp[2];
+					state.supplier=resp[3];
+					IsLoggedIn();
+					showspinner('Getting Insurers List...');
+					$('#contentLoginInfo').html('<div class="info">Getting Insurers List...</div>');
+					getInsurers();
+				};
+				
+				if (resp[0]=='BAD LOGIN') {
+		        		$('#contentLoginInfo').html('<div class="error">Login Failed. Incorrect E-mail or Password.</div>');		
+					hidespinner();
+					}
+					
+	        } else {
+        		$('#contentLoginInfo').html('<div class="error">Login Failed. Network error. Check your device is connected to the Internet.</div>');	
+        		hidespinner();
+	        	}        
+	        });
+	    return false;
+	});
+	
+	function getInsurers() {
+		insurerscount = 0;
+		insurers = [];
+		setupAjaxErrorHandler('#contentLoginInfo'); 
+	  var url = GLOBAL_SERVER;
+	  jQuery.post(url,({username: state.user, password : state.password,action: 'QUERY_INSURERS'}),
+	  	function( data ) { 
+	      if(data != "") {
+				var resp = data.split("\n");
+				if (resp[0]=='OK') { 
+					insurerscount=resp[1];
+					insurers=resp.slice(2);
+					$.mobile.changePage('../start/welcome.html');
+					$('#contentLoginInfo').html('&nbsp;');	
+				};
+					
+				if (resp[0]!='OK') {
+					console.log('BAD DATA');
+		     		$('#contentLoginInfo').html('<div class="error">Could not get insurers list. Network error. Check your device is connected to the Internet.</div>');	
+		     		  hidespinner();	
+					}
+					
+	      } else {
+	      	console.log('BAD SESSION');
+     		$('#contentLoginInfo').html('<div class="error">Could not get insurers list. Network error. Check your device is connected to the Internet.</div>');	
+	      	}
+		  hidespinner();
+	  	});
+
+	  return false;
+	};
+	</script>
+	</div>	
+</body>
+</html>

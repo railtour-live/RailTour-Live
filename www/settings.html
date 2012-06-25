@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+	<meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
+        <script type="text/javascript">writeheader(false);</script>
+  </head>
+  <body>
+
+      <div data-role="page" id="pageSettings">
+          <div data-role="header" id="mainheader"></div>
+          <div data-role="content" id="contentSettings">
+              <H2>Accounts Settings</H2>
+              <form method="post" id="formSettings" autocomplete="off">
+                  <div data-role="fieldcontain">
+                      <div>Choose if you wish to receieve the latest update when you subscribe to that tour (15p each)</div>
+                              <div align="center"><select name="latest" data-mini="true" id="latest" data-role="slider">
+                                  <option value="off">No</option>
+                                  <option value="on">Yes</option>
+                              </select></div>
+                          <div>You can choose if you want to receive notification messages when you send stop or start updates (15p each)</div>
+                              <div align="center"><select name="notifications" data-mini="true" id="notifications" data-role="slider">
+                                  <option value="off">No</option>
+                                  <option value="on">Yes</option>
+                              </select></div>
+                      <div>Choose if you want to recieve the current times when you subscribe to a tour (15p each)</div>
+                      <div align="center"><select name="notifications" data-mini="true" id="notifications" data-role="slider">
+                          <option value="off">No</option>
+                          <option value="on">Yes</option>
+                      </select></div>                      
+                  </div>
+                  <button type="submit" data-theme="b" data-icon="check" data-mini="true" data-iconpos="left">Save</button>      
+              </form>
+          </div>
+        <div data-role="footer" data-position="fixed" class="nav-glyphish-example" id="mainfooter" data-grid="d"></div>
+          <script type="text/javascript">
+              activeSection="SETTINGS";
+              </script> 
+          
+      </div></body>
+</html>
