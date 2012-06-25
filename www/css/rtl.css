@@ -2067,6 +2067,7 @@ span.ui-slider-label-b { z-index: 0; right: 0; text-indent: 1.5em;}
               #Bprofile .ui-icon { background:  url(images/icons/icons-white/123-id-card.png) 50% 50% no-repeat;  background-size: 24px 20px; }
               #Bsettings .ui-icon { background:  url(images/icons/icons-white/20-gear-2.png) 50% 50% no-repeat;  background-size: 24px 20px; }
               #Bupdate .ui-icon { background:  url(images/icons/icons-white/09-chat-2.png) 50% 50% no-repeat;  background-size: 20px 20px; }
+
               
 div {
     color:#ffffff /*{b-bar-color}*/;
