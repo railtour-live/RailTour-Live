@@ -50,27 +50,6 @@ function preventBehavior(e)
     e.preventDefault(); 
 }
 
-//window.plugins.inAppPurchaseManager.onPurchased = function(transactionIdentifier, productId, transactionReceipt) {
-//    console.log('purchased: ' + productId);
-//    /* Give coins, enable subscriptions etc */
-//}
-
-//window.plugins.inAppPurchaseManager.onRestored = function(transactionIdentifier, productId, transactionReceipt) {
-//    console.log('restored: ' + productId);
-//    /* See the developer guide for details of what to do with this */
-//}
-
-//window.plugins.inAppPurchaseManager.onFailed = function(errno, errtext) {
-//    console.log('failed: ' + errtext);
-//}
-
-//window.plugins.inAppPurchaseManager.requestProductData("com.example.test", function(productId, title, description, price) {
-//                                                       console.log("productId: " + productId + " title: " + title + " description: " + description + " price: " + price);
-//                                                       window.plugins.inAppPurchaseManager.makePurchase(productId, 1);
-//                                                       }, function(id) {
-//                                                       console.log("Invalid product id: " + id);
-//                                                       }
-//                                                       );
 
 //document.addEventListener("touchmove", preventBehavior, false);
 
@@ -100,8 +79,14 @@ function onDeviceReady() {
 	platform_version = parseFloat(device.version);
 	screenheight =  $(window).height();
 	initialized=true;
+
+    
+    
     
 }
+
+
+
 
 function getbalance() {
     showspinner('Checking Balance...');

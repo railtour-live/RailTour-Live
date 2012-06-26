@@ -38,6 +38,7 @@
 		A6363353158F5B4D004C2B30 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6363352158F5B4D004C2B30 /* MainViewController.m */; };
 		A6363355158F5B4D004C2B30 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6363354158F5B4D004C2B30 /* MainViewController.xib */; };
 		A636335F158F5B95004C2B30 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A636335E158F5B95004C2B30 /* www */; };
+		A685BB3F1599A962009393B4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685BB3E1599A962009393B4 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		A6363357158F5B4D004C2B30 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A6363358158F5B4D004C2B30 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		A636335E158F5B95004C2B30 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		A685BB3E1599A962009393B4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A685BB3F1599A962009393B4 /* CFNetwork.framework in Frameworks */,
 				A6363308158F5B4C004C2B30 /* Foundation.framework in Frameworks */,
 				A636330A158F5B4C004C2B30 /* UIKit.framework in Frameworks */,
 				A636330C158F5B4C004C2B30 /* CoreGraphics.framework in Frameworks */,
@@ -134,6 +137,7 @@
 		A6363306158F5B4C004C2B30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A685BB3E1599A962009393B4 /* CFNetwork.framework */,
 				A6363307158F5B4C004C2B30 /* Foundation.framework */,
 				A6363309158F5B4C004C2B30 /* UIKit.framework */,
 				A636330B158F5B4C004C2B30 /* CoreGraphics.framework */,
@@ -488,6 +492,10 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "RailTour-Live/RailTour-Live-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleAnalytics/GoogSDK\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -521,6 +529,10 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "RailTour-Live/RailTour-Live-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleAnalytics/GoogSDK\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
