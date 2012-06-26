@@ -22,8 +22,8 @@
                   
                   function subscribeTours(tour){
                       mytour = tour;
-                      
-                      jQuery.post(GLOBAL_SERVER,({phone : state.phone ,railtour : mytour ,action: 'SUBSCRIBE'}),
+                      var url = GLOBAL_SERVER;
+                      jQuery.post(url,({phone : state.phone ,railtour : mytour ,action: 'SUBSCRIBE'}),
                                   function( data ) {
                                   if(data != "") {
                                   navigator.notification.alert("You have subscribed to "+mytour, null, "Thank You","OK");

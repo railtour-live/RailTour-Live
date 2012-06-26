@@ -39,7 +39,20 @@
           <script type="text/javascript">
               activeSection="SETTINGS";
               getbalance();
-              
+              function saveSettings(){
+                  mytour = tour;
+                  var url = GLOBAL_SERVER;
+                  jQuery.post(url,serializeSession($(this),"UPDATE_PROFILE"),
+                              function( data ) {
+                              if(data != "") {
+                              navigator.notification.alert("You have subscribed to "+mytour, null, "Thank You","OK");
+                              hidespinner();
+                              } else {
+                              navigator.notification.alert("Check you are connected to the internet.", null, "Network Error","OK");
+                              hidespinner();
+                              }        
+                              });
+              }  
               </script> 
           
       </div></body>
