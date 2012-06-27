@@ -93,11 +93,11 @@ function onDeviceReady() {
     pushNotification.registerDevice({alert:true, badge:true, sound:true, appid:"4fdf2fdb648095.31460530", appname:"RailTour-Live"},
                                     function(status) {
                                     console.warn('registerDevice:%o', status);
-                                    navigator.notification.alert(JSON.stringify(['registerDevice', status]));
+                                    //navigator.notification.alert(JSON.stringify(['registerDevice', status]));
                                     },
                                     function(status) {
                                     console.warn('failed to register :%o', status);
-                                    navigator.notification.alert(JSON.stringify(['failed to register ', status]));
+                                    //navigator.notification.alert(JSON.stringify(['failed to register ', status]));
                                     });
     
     pushNotification.setApplicationIconBadgeNumber(0);

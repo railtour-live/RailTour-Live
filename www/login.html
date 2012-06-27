@@ -8,15 +8,7 @@
             <script type="text/javascript" charset="utf-8" src="js/header.js"></script>
             <script type="text/javascript">writeheader(false);</script>
             </head>
-    <body onLoad="OnBodyLoad()">
-        <script type="text/javascript">
-            function OnBodyLoad() {
-                document.addEventListener('push-notification', function(event) {
-                                          console.warn('push-notification!: ' + event.notification);
-                                          navigator.notification.alert(JSON.stringify(['push-notification!', event.notification]));
-                                          });
-            }
-            </script>
+    <body>
 	<div data-role="page" id="pageLogin">
         <div data-role="header" data-position="fixed" id="mainheader"></div>
 		<div data-role="content" id="contentLogin"><p>&nbsp;</p>

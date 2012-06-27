@@ -11,7 +11,7 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         document.addEventListener('push-notification', function(event) {
                                   console.warn('push-notification!: ' + event.notification);
-                                  navigator.notification.alert(JSON.stringify(['push-notification!', event.notification]));
+                                  //navigator.notification.alert(JSON.stringify(['push-notification!', event.notification]));
 								  });
         document.location='login.html';
     }
