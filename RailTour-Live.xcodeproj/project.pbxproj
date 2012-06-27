@@ -38,6 +38,9 @@
 		A6363353158F5B4D004C2B30 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6363352158F5B4D004C2B30 /* MainViewController.m */; };
 		A6363355158F5B4D004C2B30 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6363354158F5B4D004C2B30 /* MainViewController.xib */; };
 		A636335F158F5B95004C2B30 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A636335E158F5B95004C2B30 /* www */; };
+		A68083E6159AF35700550C1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68083E5159AF35700550C1C /* MapKit.framework */; };
+		A68083E9159AF3CA00550C1C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68083E8159AF3CA00550C1C /* CoreData.framework */; };
+		A68083EB159AF3F100550C1C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68083EA159AF3F100550C1C /* MessageUI.framework */; };
 		A685BB3F1599A962009393B4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685BB3E1599A962009393B4 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		A6363357158F5B4D004C2B30 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A6363358158F5B4D004C2B30 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		A636335E158F5B95004C2B30 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		A68083E5159AF35700550C1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A68083E8159AF3CA00550C1C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A68083EA159AF3F100550C1C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A685BB3E1599A962009393B4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68083EB159AF3F100550C1C /* MessageUI.framework in Frameworks */,
+				A68083E9159AF3CA00550C1C /* CoreData.framework in Frameworks */,
+				A68083E6159AF35700550C1C /* MapKit.framework in Frameworks */,
 				A685BB3F1599A962009393B4 /* CFNetwork.framework in Frameworks */,
 				A6363308158F5B4C004C2B30 /* Foundation.framework in Frameworks */,
 				A636330A158F5B4C004C2B30 /* UIKit.framework in Frameworks */,
@@ -137,6 +146,9 @@
 		A6363306158F5B4C004C2B30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A68083EA159AF3F100550C1C /* MessageUI.framework */,
+				A68083E8159AF3CA00550C1C /* CoreData.framework */,
+				A68083E5159AF35700550C1C /* MapKit.framework */,
 				A685BB3E1599A962009393B4 /* CFNetwork.framework */,
 				A6363307158F5B4C004C2B30 /* Foundation.framework */,
 				A6363309158F5B4C004C2B30 /* UIKit.framework */,
