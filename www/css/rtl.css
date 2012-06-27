@@ -1,18 +1,18 @@
 /*
- * jQuery Mobile Framework 1.1.0 db342b1f315c282692791aa870455901fdb46a55
- * http://jquerymobile.com
- *
- * Copyright 2011 (c) jQuery Project
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- */
+* jQuery Mobile Framework 1.1.0 db342b1f315c282692791aa870455901fdb46a55
+* http://jquerymobile.com
+*
+* Copyright 2011 (c) jQuery Project
+* Dual licensed under the MIT or GPL Version 2 licenses.
+* http://jquery.org/license
+*
+*/
 /* Swatches */
 /* A
- 
- 
- 
- -----------------------------------------------------------------------------------------------------------*/
+
+
+
+-----------------------------------------------------------------------------------------------------------*/
 .ui-bar-a {
 	border: 1px solid 		#333 /*{a-bar-border}*/;
 	background: 			#111111 /*{a-bar-background-color}*/;
@@ -145,7 +145,7 @@
 	text-decoration: none;
 }
 /* B
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-bar-b {
 	border: 1px solid 		#456f9a /*{b-bar-border}*/;
 	background: 			#5e87b0 /*{b-bar-background-color}*/;
@@ -278,7 +278,7 @@
 	text-decoration: none;
 }
 /* C
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-bar-c {
 	border: 1px solid 		#B3B3B3 /*{c-bar-border}*/;
 	background: 			#eeeeee /*{c-bar-background-color}*/;
@@ -410,7 +410,7 @@
 	text-decoration: none;
 }
 /* D
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-bar-d {
 	border: 1px solid 		#bbb /*{d-bar-border}*/;
 	background: 			#bbb /*{d-bar-background-color}*/;
@@ -542,7 +542,7 @@
 	text-decoration: none;
 }
 /* E
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-bar-e {
 	border: 1px solid 		#F7C942 /*{e-bar-border}*/;
 	background: 			#fadb4e /*{e-bar-background-color}*/;
@@ -674,12 +674,12 @@
 }
 /* Structure */
 /* links within "buttons" 
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 a.ui-link-inherit {
 	text-decoration: none !important;
 }
 /* Active class used as the "on" state across all themes
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-btn-active {
 	border: 1px solid 		#2373a5 /*{global-active-border}*/;
 	background: 			#5393c5 /*{global-active-background-color}*/;
@@ -700,13 +700,13 @@ a.ui-link-inherit {
 	color: 					#fff /*{global-active-color}*/;
 }
 /* button inner top highlight
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-btn-inner {
 	border-top: 1px solid 	#fff;
 	border-color: 			rgba(255,255,255,.3);
 }
 /* corner rounding classes
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-corner-tl {
 	-moz-border-radius-topleft: 		.6em /*{global-radii-blocks}*/;
 	-webkit-border-top-left-radius: 	.6em /*{global-radii-blocks}*/;
@@ -742,7 +742,7 @@ a.ui-link-inherit {
 	-moz-border-radius-bottomright: 	.6em /*{global-radii-blocks}*/;
 	-webkit-border-bottom-right-radius: .6em /*{global-radii-blocks}*/;
 	border-bottom-right-radius: 		.6em /*{global-radii-blocks}*/;
-}
+	}
 .ui-corner-right {
 	-moz-border-radius-topright: 		.6em /*{global-radii-blocks}*/;
 	-webkit-border-top-right-radius: 	.6em /*{global-radii-blocks}*/;
@@ -770,15 +770,15 @@ a.ui-link-inherit {
 	border-radius: 						   0;
 }
 /* Form field separator
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 /*.ui-br {
- border-bottom: rgb(130,130,130);
- border-bottom: rgba(130,130,130,.3);
- border-bottom-width: 1px;
- border-bottom-style: solid;
- }*/
+	border-bottom: rgb(130,130,130);
+	border-bottom: rgba(130,130,130,.3);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}*/
 /* Interaction cues
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-disabled {
 	opacity: 							.3;
 }
@@ -793,7 +793,7 @@ a.ui-link-inherit {
 	zoom: 1;
 }
 /* Icons
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-icon,
 .ui-icon-searchfield:after {
 	background: 						#666 /*{global-icon-color}*/;
@@ -805,7 +805,7 @@ a.ui-link-inherit {
 	border-radius: 						9px;
 }
 /* Alt icon color
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-icon-alt {
 	background: 						#fff;
 	background: 						rgba(255,255,255,.3);
@@ -813,10 +813,10 @@ a.ui-link-inherit {
 	background-repeat: no-repeat;
 }
 /* HD/"retina" sprite
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-resolution: 240dpi) {
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
 	
 	.ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r,
 	.ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check,
@@ -924,7 +924,7 @@ only screen and (min-resolution: 240dpi) {
 	background-size: 46px 46px;
 }
 /* Button corner classes
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-btn-corner-tl {
 	-moz-border-radius-topleft: 		1em /*{global-radii-buttons}*/;
 	-webkit-border-top-left-radius: 	1em /*{global-radii-buttons}*/;
@@ -962,7 +962,7 @@ only screen and (min-resolution: 240dpi) {
 	border-bottom-right-radius: 		1em /*{global-radii-buttons}*/;
 }
 .ui-btn-corner-right {
-    -moz-border-radius-topright: 		1em /*{global-radii-buttons}*/;
+	 -moz-border-radius-topright: 		1em /*{global-radii-buttons}*/;
 	-webkit-border-top-right-radius: 	1em /*{global-radii-buttons}*/;
 	border-top-right-radius: 			1em /*{global-radii-buttons}*/;
 	-moz-border-radius-bottomright: 	1em /*{global-radii-buttons}*/;
@@ -1001,12 +1001,12 @@ only screen and (min-resolution: 240dpi) {
 .ui-btn-corner-right,
 .ui-btn-corner-left,
 .ui-btn-corner-all {
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
 }
 /* Overlay / modal
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-overlay {
 	background: #666;
 	opacity: .5;
@@ -1043,7 +1043,7 @@ only screen and (min-resolution: 240dpi) {
 	box-shadow: 0px 1px 0 					rgba(255,255,255,.4) /*{global-icon-shadow}*/;
 }
 /* Focus state - set here for specificity (note: these classes are added by JavaScript)
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-btn:focus {
 	outline: 0;
 }
@@ -1054,7 +1054,7 @@ only screen and (min-resolution: 240dpi) {
 	box-shadow: 0px 0px 12px 			#387bbe /*{global-active-background-color}*/;
 }
 /* unset box shadow in browsers that don't do it right
- -----------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------*/
 .ui-mobile-nosupport-boxshadow * {
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
@@ -1080,13 +1080,13 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 
 .ui-mobile .ui-page-active { display: block; overflow: visible; }
 /* on ios4, setting focus on the page element causes flashing during transitions when there is an outline, so we turn off outlines */
-.ui-page { outline: none; background: transparent url(images/ProDots-iPhone.png);}
+.ui-page { outline: none; background: transparent url(myimages/ProDots-iPhone.png);}
 /*orientations from js are available */
 @media screen and (orientation: portrait){
-    .ui-mobile, .ui-mobile .ui-page { min-height: 420px; }
+.ui-mobile, .ui-mobile .ui-page { min-height: 420px; }
 }
 @media screen and (orientation: landscape){
-    .ui-mobile, .ui-mobile .ui-page { min-height: 300px; }
+.ui-mobile, .ui-mobile .ui-page { min-height: 300px; }
 }
 /* loading screen */
 .ui-loading .ui-loader { display: block; }
@@ -1846,9 +1846,9 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-controlgroup-horizontal .ui-controlgroup-last { margin-right: 0; }
 .ui-controlgroup .ui-checkbox label, .ui-controlgroup .ui-radio label { font-size: 16px;  }
 /* conflicts with listview..
- .ui-controlgroup .ui-btn-icon-notext { width: 30px; height: 30px; text-indent: -9999px; }
- .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner {  padding: 5px 6px 5px 5px; }
- */
+.ui-controlgroup .ui-btn-icon-notext { width: 30px; height: 30px; text-indent: -9999px; }
+.ui-controlgroup .ui-btn-icon-notext .ui-btn-inner {  padding: 5px 6px 5px 5px; }
+*/
 @media all and (min-width: 450px){
 	.ui-field-contain .ui-controlgroup-label { vertical-align: top; display: inline-block;  width: 20%;  margin: 0 2% 0 0;  }
 	.ui-field-contain .ui-controlgroup-controls { width: 60%; display: inline-block; }
@@ -1856,7 +1856,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 	.ui-field-contain .ui-controlgroup-horizontal .ui-select { width: auto; }
 }	
 .ui-dialog {
-    background: none !important; /* this is to ensure that dialog theming does not apply (by default at least) on the page div */
+	 background: none !important; /* this is to ensure that dialog theming does not apply (by default at least) on the page div */
 }
 .ui-dialog-contain { width: 92.5%; max-width: 500px; margin: 10% auto 15px auto; padding: 0; }
 .ui-dialog .ui-header {
@@ -1958,7 +1958,7 @@ label.ui-input-text { font-size: 16px; line-height: 1.4; display: block; font-we
 input.ui-input-text, textarea.ui-input-text { background-image: none; padding: .4em; line-height: 1.4; font-size: 16px; display: block; width: 97%; outline: 0; }
 .ui-header input.ui-input-text,
 .ui-footer input.ui-input-text { margin-left: 1.25%; padding: .4em 1%; width: 95.5% } /* Note that padding left/right on text inputs is factored into how the element is displayed in Firefox, but does not actually pad the text inside it. */
-input.ui-input-text { -webkit-appearance: none; }
+ input.ui-input-text { -webkit-appearance: none; }
 textarea.ui-input-text { height: 50px; -webkit-transition: height 200ms linear; -moz-transition: height 200ms linear; -o-transition: height 200ms linear; transition: height 200ms linear; }
 .ui-input-search { padding: 0 30px; background-image: none; position: relative; }
 .ui-icon-searchfield:after { position: absolute; left: 7px; top: 50%; margin-top: -9px; content: ""; width: 18px; height: 18px; opacity: .5; }
@@ -2007,7 +2007,7 @@ ol.ui-listview .ui-li-jsnumbering:before { content: "" !important; } /* to avoid
 .ui-li-thumb, .ui-listview .ui-li-icon, .ui-li-content { float: left; margin-right: 10px; }
 .ui-li-aside { float: right; width: 50%; text-align: right; margin: .3em 0; }
 @media all and (min-width: 480px){
-    .ui-li-aside { width: 45%; }
+	 .ui-li-aside { width: 45%; }
 }	 
 .ui-li-divider { cursor: default; }
 .ui-li-has-alt .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-alt { padding-right: 95px; }
@@ -2060,29 +2060,29 @@ span.ui-slider-label-b { z-index: 0; right: 0; text-indent: 1.5em;}
 
 
 
-.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
-.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
-#Bhome .ui-icon { background:  url(images/icons/icons-white/272-windows.png) 50% 50% no-repeat; background-size: 24px 20px; }
-#Btours .ui-icon { background:  url(images/icons/icons-white/275-broadcast.png) 50% 50% no-repeat; background-size: 24px 20px;  }
-#Bprofile .ui-icon { background:  url(images/icons/icons-white/123-id-card.png) 50% 50% no-repeat;  background-size: 24px 20px; }
-#Bsettings .ui-icon { background:  url(images/icons/icons-white/20-gear-2.png) 50% 50% no-repeat;  background-size: 24px 20px; }
-#Bupdate .ui-icon { background:  url(images/icons/icons-white/09-chat-2.png) 50% 50% no-repeat;  background-size: 20px 20px; }
+              .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+              .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+              #Bhome .ui-icon { background:  url(images/icons/icons-white/272-windows.png) 50% 50% no-repeat; background-size: 24px 20px; }
+              #Btours .ui-icon { background:  url(images/icons/icons-white/275-broadcast.png) 50% 50% no-repeat; background-size: 24px 20px;  }
+              #Bprofile .ui-icon { background:  url(images/icons/icons-white/123-id-card.png) 50% 50% no-repeat;  background-size: 24px 20px; }
+              #Bsettings .ui-icon { background:  url(images/icons/icons-white/20-gear-2.png) 50% 50% no-repeat;  background-size: 24px 20px; }
+              #Bupdate .ui-icon { background:  url(images/icons/icons-white/09-chat-2.png) 50% 50% no-repeat;  background-size: 20px 20px; }
 
-
+              
 div {
     color:#ffffff /*{b-bar-color}*/;
     font-size : 13px;
 }
 
 h2 {
-    font-size : 14px;
+ font-size : 14px;
  	color:#ffffff /*{b-bar-color}*/;
 	font-weight: bold;
 	text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
  	
 }
 label {
-    font-size : 12px;
+ font-size : 12px;
  	color:#ffffff /*{b-bar-color}*/;
 	font-weight: bold;
 	text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
@@ -2091,13 +2091,13 @@ label {
 .info {
     font-size : 12px;
 	color : white;
-    text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
+    	text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
 }
 
 .error {
     font-size : 12px;
 	color : red;
-    text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
+    	text-shadow: 0 /*{b-bar-shadow-x}*/ -1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #000000 /*{b-bar-shadow-color}*/;
 }
 
 p {
