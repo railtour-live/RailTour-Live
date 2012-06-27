@@ -26,6 +26,8 @@
 	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>PushNotification</key>
+		<string>PushNotification</string>
 		<key>Logger</key>
 		<string>CDVLogger</string>
 		<key>Compass</key>

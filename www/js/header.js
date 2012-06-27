@@ -8,5 +8,6 @@ function writeheader(formaps) {
                 <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.1.0.js"></script>\
                 <script type="text/javascript" charset="utf-8" src="js/cordova-1.8.0.js"></script>\
                 <script type="text/javascript" src="js/badger.js"></script>\
+                <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>\
                 <script type="text/javascript" charset="utf-8" src="js/core.js"></script>');
 }

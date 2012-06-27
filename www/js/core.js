@@ -41,6 +41,8 @@ function resetvars() {
     state.badge = '';
 }
 
+//var phoneName = device.uuid;
+
 //var activeSection = 'HOME';
 var GLOBAL_SERVER = 'https://www.railtour-live.co.uk/app/mobile.php';
 var appBusy = false;
@@ -75,12 +77,30 @@ $("#pageConfirm").live('pagebeforecreate', loginaddmarkup);
 $(document).bind('pagechange', beforechange);
 
 function onDeviceReady() {
+    
     platform_name = device.platform;
 	platform_version = parseFloat(device.version);
 	screenheight =  $(window).height();
 	initialized=true;
-
     
+    if(typeof(invokeString) != "undefined" && invokeString.length > 0 &&  invokeString[0] == '{') {
+        //push notification
+        console.warn('push-notification!: ' + invokeString);
+        navigator.notification.alert(JSON.stringify(['push-notification!', invokeString]));
+    }
+    
+    var pushNotification = window.plugins.pushNotification;
+    pushNotification.registerDevice({alert:true, badge:true, sound:true, appid:"4fdf2fdb648095.31460530", appname:"RailTour-Live"},
+                                    function(status) {
+                                    console.warn('registerDevice:%o', status);
+                                    navigator.notification.alert(JSON.stringify(['registerDevice', status]));
+                                    },
+                                    function(status) {
+                                    console.warn('failed to register :%o', status);
+                                    navigator.notification.alert(JSON.stringify(['failed to register ', status]));
+                                    });
+    
+    pushNotification.setApplicationIconBadgeNumber(0);
     
     
 }

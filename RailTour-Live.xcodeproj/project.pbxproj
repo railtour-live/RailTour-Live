@@ -42,6 +42,7 @@
 		A68083E9159AF3CA00550C1C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68083E8159AF3CA00550C1C /* CoreData.framework */; };
 		A68083EB159AF3F100550C1C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68083EA159AF3F100550C1C /* MessageUI.framework */; };
 		A685BB3F1599A962009393B4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A685BB3E1599A962009393B4 /* CFNetwork.framework */; };
+		A6C2C032159AFBE300E71BA9 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C2C02E159AFBE300E71BA9 /* PushNotification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		A68083E8159AF3CA00550C1C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A68083EA159AF3F100550C1C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A685BB3E1599A962009393B4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A6C2C02C159AFBE300E71BA9 /* PushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotification.h; sourceTree = "<group>"; };
+		A6C2C02E159AFBE300E71BA9 /* PushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 		A63632F5158F5B4C004C2B30 = {
 			isa = PBXGroup;
 			children = (
+				A6C2C02A159AFBE300E71BA9 /* PushNotification */,
 				A636335E158F5B95004C2B30 /* www */,
 				A6363321158F5B4C004C2B30 /* RailTour-Live */,
 				A6363306158F5B4C004C2B30 /* Frameworks */,
@@ -277,6 +281,15 @@
 			name = Plugins;
 			sourceTree = "<group>";
 		};
+		A6C2C02A159AFBE300E71BA9 /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2C02C159AFBE300E71BA9 /* PushNotification.h */,
+				A6C2C02E159AFBE300E71BA9 /* PushNotification.m */,
+			);
+			path = PushNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +391,7 @@
 				A6363328158F5B4C004C2B30 /* main.m in Sources */,
 				A6363350158F5B4D004C2B30 /* AppDelegate.m in Sources */,
 				A6363353158F5B4D004C2B30 /* MainViewController.m in Sources */,
+				A6C2C032159AFBE300E71BA9 /* PushNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,8 +456,8 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Glyn Murray (RBJQR22352)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glyn Murray (RBJQR22352)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -457,9 +471,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PROVISIONING_PROFILE = "EFFF569D-318A-4BF4-8C79-08565C1928A3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFFF569D-318A-4BF4-8C79-08565C1928A3";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -472,17 +486,17 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Nat Pres Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nat Pres Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PROVISIONING_PROFILE = "AA8D2E74-3CA6-485E-ACEB-67ADCB8D2995";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AA8D2E74-3CA6-485E-ACEB-67ADCB8D2995";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -504,6 +518,7 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "RailTour-Live/RailTour-Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAnalytics/GoogSDK\"",
@@ -541,6 +556,7 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "RailTour-Live/RailTour-Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GoogleAnalytics/GoogSDK\"",
